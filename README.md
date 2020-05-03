@@ -20,10 +20,9 @@ Remove master.zip and README.md as they are no longer needed. <br/>
 $ rm master.zip <br/>
 $ rm README.md <br/> <br/>
 Your *MyDir* folder must now look like this: <br/> 
-tabby.jpeg <br/>
 schoolbus.jpg <br/>
 grace_hopper.bmp <br/>
-Labels.txt <br/>
+labels.txt <br/>
 TestARMnnMobileNetV1_Quant.cpb <br/>
 mobilenetv1_quant_tflite.cpp<br/>
 model_output_labels_loader.hpp<br/>
