@@ -38,4 +38,4 @@ Give the .tflite file of your choice and the image to be tested as command line 
 Remember, you also need a working OpenCV 4 on your Raspberry. <br/>
 Preferably use our installation: https://qengineering.eu/install-opencv-4.3-on-raspberry-pi-4.html <br/>
 
-![output image]( https://qengineering.eu/images/Schoolbus2.png )
+![output image]( https://qengineering.eu/images/Schoolbus_4_6.png )
