@@ -33,8 +33,8 @@ Download a quantized model, extract the .tflite from the tarball and place it in
 Now your *MyDir* folder may contain: mobilenet_v1_1.0_224_quant.tflite. <br/>
 Or: inception_v4_299_quant.tflite. Or both of course. <br/> <br/>
 Run TestTensorFlow_Lite.cpb with Code::Blocks.<br/>
-Giver the .tflite file of your choice and the image to be tested as command line parameter<br/> <br/>
-![output image]( https://qengineering.eu/images/Command_line_options.png )
+Give the .tflite file of your choice and the image to be tested as command line parameter<br/> <br/>
+![output image]( https://qengineering.eu/images/Command_line_options.png )<br/> <br/>
 Remember, you also need a working OpenCV 4 on your Raspberry. <br/>
 Preferably use our installation: https://qengineering.eu/install-opencv-4.3-on-raspberry-pi-4.html <br/>
 
