@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TestARMnnMobileNetV1_Quant" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ARMnnMobileLite" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ARMnnMobileLite" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-m ./mobilenet_v1_1.0_224_quant.tflite -p ./labels.txt -d ./schoolbus.jpg -c CpuAcc" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O3" />
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-fexceptions" />
+			<Add option="-pthread" />
+			<Add option="-fPIE" />
+			<Add directory="/home/pi/armnn-pi/boost/include" />
+			<Add directory="/home/pi/armnn-pi/armnn/include" />
+			<Add directory="/home/pi/armnn-pi/armnn/src/backends" />
+			<Add directory="/home/pi/armnn-pi/armnn/include/armnn" />
+			<Add directory="/home/pi/armnn-pi/armnn/src/armnnUtils" />
+			<Add directory="/home/pi/armnn-pi/armnn/tests" />
+		</Compiler>
+		<Linker>
+			<Add option="-O3" />
+			<Add option="-pthread" />
+			<Add option="-pie" />
+			<Add library="libarmnn" />
+			<Add library="libarmnnTfLiteParser" />
+			<Add library="libinferenceTest" />
+			<Add library="libboost_filesystem" />
+			<Add library="libboost_program_options" />
+			<Add directory="/home/pi/armnn-pi/armnn/build" />
+			<Add directory="/home/pi/armnn-pi/armnn/build/tests" />
+			<Add directory="/home/pi/armnn-pi/boost/lib" />
+		</Linker>
+		<Unit filename="mobilenetv1_quant_tflite.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
